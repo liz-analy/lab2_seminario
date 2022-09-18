@@ -7,7 +7,7 @@ import { useWord } from "./hooks/useWord";
 import "./styles.css";
 export const HangManComponent = () => {
         const [listWord, , ifContains, isValid] = useWord("TNT");
-        const [counter,, decrementCounter] = useCounter(6, {max: 6, min: 0});
+        const [counter, , decrementCounter] = useCounter(6, {max: 6, min: 0});
         const handlerKeyPress = (key) => {
             ifContains(key);
             if (!isValid(key)) {
